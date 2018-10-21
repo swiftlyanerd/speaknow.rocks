@@ -2,160 +2,213 @@
 <!-- In no way, shape, or form am I attempting to pass this off as my own code. -->
 
 <!-- This is the edited file, the original can be found in the same directory labeled as "original-index.html". -->
+
+<!-- TODO: Mobile CSS -->
 <html>
+
 <head>
 <title>Speak Now > Red</title>
 <link rel="icon" href="images/tabicon.png">
 </head>
-<style>
-	@font-face { font-family: speakNow; src: url("fonts/sudestada.ttf"); }
 
-	#daily {
-		width:100%;
-		height:100%;
-		background-position: center;
-        	background-repeat: no-repeat;
-        	position: absolute;
-        	background-size: cover;
-        	-webkit-background-size: cover;
-   		-moz-background-size: cover;
-   		-o-background-size: cover;
-        	top: 0;
-        	left: 0;
-	}
-	#dayName {
-	        font-family: speakNow, Didot, 'Didot LT STD', 'Hoefler Text', Garamond, 'Times New Roman';
-	        font-size: 100px;
-	        position: absolute;
-	        padding: 0% 0% 0% 3%;
-    	}
-    @media screen and (max-width: 400px) and (orientation : portrait) {
+<style>
+@font-face { font-family: speakNowMain; src: url("fonts/Jellyka_Bees_Antique_Handwriting_Speak_Now.ttf"); }
+@font-face { font-family: speakNowAlt; src: url("fonts/Sudestada_Speak_Now.ttf"); }
+
+#daily {
+    width:100%;
+    height:100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    top: 0;
+    left: 0;
+}
+
+#dayName {
+	font-family: speakNowMain, speakNowAlt, Didot, 'Didot LT STD', 'Hoefler Text', Garamond, 'Times New Roman';
+	font-size: 100px;
+	position: absolute;
+	padding: 0% 0% 0% 3%;
+}
+
+@media screen and (max-width: 400px) and (orientation : portrait) {
     #dayName { 
-            	font-size: 57px;
-            	padding: 20% 0% 0% 6%;
-            }
-     }
-    @media screen and (max-width : 667px) and (orientation : landscape){
+        font-size: 50px;
+        padding: 0% 0% 0% 3%;
+    }
+}
+
+@media screen and (max-width : 667px) and (orientation : landscape){
     #dayName { 
-            	font-size: 57px;
-            	padding: 13% 0% 0% 13%;
-            }
-     }
+        font-size: 75px;
+        padding: 0% 0% 0% 3%;
+    }
+}
+
+#date {
+    font-family: speakNowMain, speakNowAlt, Didot, 'Didot LT STD', 'Hoefler Text', Garamond, 'Times New Roman';
+    font-size: 70px;
+    color: #ffffff;
+    position: absolute;
+    padding: 10% 0% 0% 3%;
+}
+
+@media screen and (max-width: 400px) and (orientation : portrait) {
+    #date { 
+        font-size: 57px;
+        padding: 20% 0% 0% 6%;
+    }
+}
+
+@media screen and (max-width : 667px) and (orientation : landscape){
+    #date { 
+        font-size: 57px;
+        padding: 13% 0% 0% 13%;
+    }
+}
+
+#time {
+    font-family: speakNowMain, speakNowAlt, Didot, 'Didot LT STD', 'Hoefler Text', Garamond, 'Times New Roman';
+    font-size: 70px;
+    color: #ffffff;
+    position: absolute;
+    padding: 15% 0% 0% 3%;
+}
+
+@media screen and (max-width: 400px) and (orientation : portrait) {
+    #time { 
+        font-size: 100px;
+        padding: 20% 0% 0% 6%;
+    }
+}
+
+@media screen and (max-width : 667px) and (orientation : landscape){
+    #time { 
+        font-size: 57px;
+        padding: 13% 0% 0% 13%;
+    }
+}
+
 h2 {
-  clear:both;
+    clear:both;
 }
 
 p, a {
-  font-size:9pt;
-  margin:5px 0 0 0;
-  color:#3d3d3d;
-  text-decoration: none;
+    font-size:9pt;
+    margin:5px 0 0 0;
+    color:#3d3d3d;
+    text-decoration: none;
 }
 
 a, a:visited {
-  color:#427fed;
+    color:#427fed;
 }
 
 a:hover {
-  color:#82afff;
+    color:#82afff;
 }
 
 li {
-  background-color:#FFFFFF
+    background-color:#FFFFFF
 }
 
 ul li {
-  list-style:none;
-  overflow:hidden;
-  border:1px solid #dedede;
-  margin:5px;
-  padding:5px;
-  margin-right: 40px;
+    list-style:none;
+    overflow:hidden;
+    border:1px solid #dedede;
+    margin:5px;
+    padding:5px;
+    margin-right: 40px;
 }
 
 ul li:hover {
-  background-color:#f0f3fb;
+    background-color:#f0f3fb;
 }
 
 .user, .tweet, .timePosted {
-  float:left;
+    float:left;
 }
 
 .user {
-  width:22%;
+    width:22%;
 }
 
 .tweet {
-  width:50%;
-  font-family: Didot, 'Didot LT STD', 'Hoefler Text', Garamond, 'Times New Roman';
-  margin-top: 10px;
+    width:50%;
+    font-family: Didot, 'Didot LT STD', 'Hoefler Text', Garamond, 'Times New Roman';
+    margin-top: 10px;
 }
 
 .timePosted {
-  width:15%;
-  margin: 10px 0 0 10px;
-}
+    width:15%;
+    margin: 10px 0 0 10px;
+    }
 
 .user {
-  clear:left;
+    clear:left;
 }
 
 .user a {
- width: 100px;
+    width: 100px;
 }
 
 .user span span {
-  width:100px;
-  display:block;
-  margin-top:5px;
-  font-family: Didot, 'Didot LT STD', 'Hoefler Text', Garamond, 'Times New Roman';
-  color: #000000;
+    width:100px;
+    display:block;
+    margin-top:5px;
+    font-family: Didot, 'Didot LT STD', 'Hoefler Text', Garamond, 'Times New Roman';
+    color: #000000;
 }
 
 .user img, .user a > span {
-  float:left;
-  margin: 10px 0 10px 10px;
-  font-family: Didot, 'Didot LT STD', 'Hoefler Text', Garamond, 'Times New Roman';
+    float:left;
+    margin: 10px 0 10px 10px;
+    font-family: Didot, 'Didot LT STD', 'Hoefler Text', Garamond, 'Times New Roman';
 }
 
 .interact {
-  float:left;
-  width:10%;
-  margin-top:0px;
-  font-family: Didot, 'Didot LT STD', 'Hoefler Text', Garamond, 'Times New Roman';
+    float:left;
+    width:10%;
+    margin-top:0px;
+    font-family: Didot, 'Didot LT STD', 'Hoefler Text', Garamond, 'Times New Roman';
 }
 
 .interact a {
-  margin-left:5px;
-  float:left;
-  font-family: Didot, 'Didot LT STD', 'Hoefler Text', Garamond, 'Times New Roman';
-  color: #000000;
+    margin-left:5px;
+    float:left;
+    font-family: Didot, 'Didot LT STD', 'Hoefler Text', Garamond, 'Times New Roman';
+    color: #000000;
 }
 
 .user a > span {
-  margin-left:10px;
-  margin-top:5px;
-  font-family: Didot, 'Didot LT STD', 'Hoefler Text', Garamond, 'Times New Roman';
-  color: #000000;
-  padding-left: 8px;
-  margin-bottom: 0px;
+    margin-left:10px;
+    margin-top:5px;
+    font-family: Didot, 'Didot LT STD', 'Hoefler Text', Garamond, 'Times New Roman';
+    color: #000000;
+    padding-left: 8px;
+    margin-bottom: 0px;
 }
 
 .media img {
-  max-width:250px;
-  max-height:250px;
+    max-width:250px;
+    max-height:250px;
 }
 
 #linkage {
-  position:fixed;
-  top:0px;
-  right:0px;
-  background-color:#3d3d3d;
-  color:#ffffff;
-  text-decoration:none;
-  padding:5px;
-  width:10%;
-  font-family:arial;
+    position:fixed;
+    top:0px;
+    right:0px;
+    background-color:#3d3d3d;
+    color:#ffffff;
+    text-decoration:none;
+    padding:5px;
+    width:10%;
+    font-family:arial;
 }
 #tweets{
 	bottom: 0px;
@@ -236,27 +289,40 @@ ul li:hover {
     	width: 13%;
 	}
 }
-
 </style>
+
 <script>
-function setbg(){
-var backImg = ['images/suntay.jpg', 'images/montay.jpg', 'images/tuestay.jpg', 'images/wednestay.jpg' , 'images/thurstay.jpg' , 'images/fritay.jpg' , 'images/saturtay.jpg' ];
-var tayname = ['SunTay', 'MonTay', 'TuesTay', 'WednesTay' , 'ThursTay' , 'FriTay' , 'SaturTay' ];
-var today = new Date();
-var day = today.getDay();
-document.getElementById('daily').style.backgroundImage = 'url('+backImg[day]+')';
+function setbg() {
+    var backImg = ['images/suntay.jpg', 'images/montay.jpg', 'images/tuestay.jpg', 'images/wednestay.jpg' , 'images/thurstay.jpg' , 'images/fritay.jpg' , 'images/saturtay.jpg' ];
+    var tayname = ['SunTay', 'MonTay', 'TuesTay', 'WednesTay' , 'ThursTay' , 'FriTay' , 'SaturTay' ];
+    var today = new Date();
+    var day = today.getDay();
+    var date = today.toDateString().substring(3, today.toDateString().length);
+    var twentyFourHr = today.getHours();
+    var hour = today.getHours();
+    var min = today.getMinutes();
+    var mid = 'pm';
+
+    if (min < 10) { min = "0" + min; }
+    if (hour > 12) { hour = hour - 12; }    
+    if(hour == 0) { hour=12; }
+    if(twentyFourHr < 12) { mid = 'am'; }
+
+    document.getElementById('daily').style.backgroundImage = 'url('+backImg[day]+')';
     document.getElementById('dayName').style.color = "#ffffff";
-if (tayname[day] == 'MonTay' || tayname[day] == 'TuesTay' || tayname[day] == 'WednesTay' || tayname[day] == 'ThursTay') {
-}
-else {
-    document.getElementById('dayName').style.color = "#ffffff";
-}
-document.getElementById('dayName').innerHTML = tayname[day];
+    document.getElementById('dayName').innerHTML = tayname[day];
+    document.getElementById('date').innerHTML = date;
+    document.getElementById('time').innerHTML = hour + ':' + min + mid;
+
+    setTimeout(setbg, 1000);
 }
 </script>
+
 <body onload="setbg()">
 <div id="daily">
 <p id="dayName"></p>
+<p id="date"></p>
+<p id="time"></p>
 </div>
 <div id="tweets"></div>
 </body>
